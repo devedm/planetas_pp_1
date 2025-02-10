@@ -19,7 +19,7 @@ public abstract class CuerpoCeleste {
     public CuerpoCeleste(String nombre, double tamaño, double distanciaAlSol, int numeroLunas) {
         this.nombre = nombre;
         this.tamaño = tamaño;
-        this.distanciaAlSol = distanciaAlSol;
+        this.distanciaAlSol = distanciaAlSol; // el valor debe ser en UA
         this.numeroLunas = numeroLunas;
     }
 

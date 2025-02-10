@@ -16,13 +16,14 @@ public class PlanetaRocoso extends CuerpoCeleste{
     
     @Override
     public double calcularAnio() {
-        // Aproximación basada en la tercera ley de Kepler: T^2 = R^3 (R en AU, T en años terrestres)
-        return Math.sqrt(Math.pow(distanciaAlSol, 3));
+        // Fórmula basada en la tercera ley de Kepler: T = sqrt(R^3 / k), donde k ≈ 1
+        double k = 1.0; // Constante de proporcionalidad para simplificar la ecuación en nuestro sistema
+        return Math.sqrt(Math.pow(distanciaAlSol, 3) / k);
     }
     
     @Override
     public String toString() {
-        return super.toString() + " | Duración del año: " + String.format("%.2f", calcularAnio()) + " años terrestres";
+        return super.toString() + " | Duración del año: " + calcularAnio() + " años terrestres";
     }
     
 }

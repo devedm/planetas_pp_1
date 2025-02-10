@@ -16,9 +16,8 @@ public class Sistema_solar_pp_1 {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        
-        PlanetaRocoso marte = new PlanetaRocoso("Marte", 120, 227.9, 2); // Instancia de planeta Marte
-        System.out.println("Un año en marte equivale a " + String.format("%.2f", marte.calcularAnio()) + " dias terrestres.");
+        PlanetaRocoso marte = new PlanetaRocoso("Marte", 3389.5, 1.52, 2); // Instancia de planeta Marte
+        System.out.println("Un año en marte equivale a " + String.format("%.2f",marte.calcularAnio() * 365.25) + " dias terrestres.");
     }
     
 }
