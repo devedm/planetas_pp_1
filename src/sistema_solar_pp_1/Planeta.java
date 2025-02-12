@@ -10,5 +10,5 @@ package sistema_solar_pp_1;
  */
 public interface Planeta {
     public abstract double calcularAnio();
-    
+    public abstract String planetaASCII();   
 }

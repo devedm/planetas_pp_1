@@ -24,6 +24,9 @@ public class SistemaSolar {
         this.arrayRocosos[3] = new PlanetaRocoso("Mercurio", 2439.7, 0.39, 0.39, 0, "Oxígeno, sodio, hidrógeno", 0);
         
         this.arrayGaseosos[0] = new PlanetaGaseoso("Jupiter", 69911, 24.79, 5.20, 95, "Hidrógeno, helio", 1);
+        this.arrayGaseosos[0] = new PlanetaGaseoso("Saturno", 58232, 10.44, 9.58, 146, "Hidrógeno, helio", 1);
+        this.arrayGaseosos[0] = new PlanetaGaseoso("Urano", 25362, 8.69, 19.22, 27, "Hidrógeno, helio, metano", 1);
+        this.arrayGaseosos[0] = new PlanetaGaseoso("Neptuno", 24622, 11.15, 30.05, 14, "Hidrógeno, helio, metano", 1);
     }
     
     public String compararTamaño( CuerpoCeleste planeta1, CuerpoCeleste planeta2){
@@ -40,8 +43,32 @@ public class SistemaSolar {
         return this.arrayRocosos[0];
     }
     
+    public PlanetaRocoso getTierra(){
+        return this.arrayRocosos[1];
+    }
+    
+    public PlanetaRocoso getMarte(){
+        return this.arrayRocosos[2];
+    }
+    
+    public PlanetaRocoso getMercurio(){
+        return this.arrayRocosos[3];
+    }
+    
     public PlanetaGaseoso getJupiter(){
         return this.arrayGaseosos[0];
+    }
+    
+    public PlanetaGaseoso getSaturno(){
+        return this.arrayGaseosos[1];
+    }
+    
+    public PlanetaGaseoso getUrano(){
+        return this.arrayGaseosos[2];
+    }
+    
+    public PlanetaGaseoso getNeptuno(){
+        return this.arrayGaseosos[3];
     }
     
     

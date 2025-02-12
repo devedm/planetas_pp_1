@@ -23,6 +23,21 @@ public class PlanetaGaseoso extends CuerpoCeleste implements Planeta {
         return Math.sqrt(getRadio() * getGravedad());
     }
 
-    
+    @Override
+    public String planetaASCII() {
+        return """
+                ~+
+                                
+                     *       +
+               '                  |
+           ()    .-.,="``"=.    - o -
+                 '=/_       \\     |
+              *   |  '=._    |
+                   \\     `=./`,        '
+                .   '=.__.=' `='      *
+       +                         +
+            O      *        '       .
+        """;
+    }    
 }
 

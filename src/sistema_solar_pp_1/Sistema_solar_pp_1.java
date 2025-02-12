@@ -16,8 +16,11 @@ public class Sistema_solar_pp_1 {
     public static void main(String[] args) {
         
         SistemaSolar sistemaSolar = new SistemaSolar();
-        System.out.println(sistemaSolar.getJupiter().getNombre() + "es un planeta rocoso");
-        System.out.println(sistemaSolar.compararTamaño(sistemaSolar.getVenus(), sistemaSolar.getJupiter()));
+        System.out.println(sistemaSolar.getJupiter().planetaASCII());
+        System.out.println("El radio de " + sistemaSolar.getJupiter().getNombre() + " es: " + sistemaSolar.getJupiter().getRadio());
+        System.out.println("El radio de " + sistemaSolar.getMarte().getNombre() + " es: " + sistemaSolar.getMarte().getRadio());
+        
+        System.out.println(sistemaSolar.compararTamaño(sistemaSolar.getJupiter(), sistemaSolar.getMarte()));
         
         
     }

@@ -25,6 +25,21 @@ public class PlanetaRocoso extends CuerpoCeleste implements Planeta{
     public double girar() {
         return Math.sqrt(getRadio() * getGravedad());
     }
-    
-    
+
+    @Override
+    public String planetaASCII() {
+        return """
+                ~+
+                                
+                     *       +
+               '                  |
+           ()    .-.,="``"=.    - o -
+                 '=/_       \\     |
+              *   |  '=._    |
+                   \\     `=./`,        '
+                .   '=.__.=' `='      *
+       +                         +
+            O      *        '       .
+        """;
+    }   
 }
