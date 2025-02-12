@@ -14,10 +14,20 @@ public class Sistema_solar_pp_1 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // Marte
+        System.out.print("\n=============================\n");
+        PlanetaRocoso marte = new PlanetaRocoso("Marte", 3389.5, 3.73, 1.5, 0, "dióxido de carbono", 0);
+        System.out.print(marte.toString());
+        System.out.print(marte.calcularAnio());
+        System.out.print(marte.girar());
         
-        PlanetaRocoso marte = new PlanetaRocoso("Marte", 3389.5, 1.52, 2); // Instancia de planeta Marte
-        System.out.println("Un año en marte equivale a " + String.format("%.2f",marte.calcularAnio() * 365.25) + " dias terrestres.");
+        // Saturno
+        System.out.print("\n=============================\n");
+        PlanetaGaseoso saturno = new PlanetaGaseoso("Saturno", 58323, 10.44, 9.58, 82, "hidrogeno y helio", 10);
+        System.out.print(saturno.toString());
+        System.out.print(saturno.calcularAnio());
+        System.out.print(saturno.girar());
+        
     }
     
 }

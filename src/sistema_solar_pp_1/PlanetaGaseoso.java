@@ -4,13 +4,10 @@
  */
 package sistema_solar_pp_1;
 
-/**
- *
- * @author minio
- */
-public class PlanetaRocoso extends CuerpoCeleste implements Planeta{
 
-    public PlanetaRocoso(String nombre, double radio, double gravedad, double distanciaAlSol, int numeroLunas, String atmosfera, int anillos) {
+public class PlanetaGaseoso extends CuerpoCeleste implements Planeta { 
+
+    public PlanetaGaseoso(String nombre, double radio, double gravedad, double distanciaAlSol, int numeroLunas, String atmosfera, int anillos) {
         super(nombre, radio, gravedad, distanciaAlSol, numeroLunas, atmosfera, anillos);
     }
 
@@ -25,6 +22,7 @@ public class PlanetaRocoso extends CuerpoCeleste implements Planeta{
     public double girar() {
         return Math.sqrt(getRadio() * getGravedad());
     }
-    
+
     
 }
+

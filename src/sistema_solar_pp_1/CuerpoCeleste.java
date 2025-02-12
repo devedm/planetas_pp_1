@@ -11,38 +11,77 @@ package sistema_solar_pp_1;
  * @author ridie
  */
 public abstract class CuerpoCeleste {
-    protected String nombre;
-    protected double tamaño;
-    protected double distanciaAlSol; 
-    protected int numeroLunas;
+    private String nombre;
+    double radio;
+    double gravedad;
+    private double distanciaAlSol; 
+    private int numeroLunas;
+    private String atmosfera;
+    private int anillos;
 
-    public CuerpoCeleste(String nombre, double tamaño, double distanciaAlSol, int numeroLunas) {
+    public CuerpoCeleste(String nombre, double radio, double gravedad, double distanciaAlSol, int numeroLunas, String atmosfera, int anillos) {
         this.nombre = nombre;
-        this.tamaño = tamaño;
-        this.distanciaAlSol = distanciaAlSol; // el valor debe ser en UA
+        this.radio = radio;
+        this.gravedad = gravedad;
+        this.distanciaAlSol = distanciaAlSol;
         this.numeroLunas = numeroLunas;
+        this.atmosfera = atmosfera;
+        this.anillos = anillos;
     }
+    
+    public abstract double girar();
 
+    /**
+     * @return the nombre
+     */
     public String getNombre() {
         return nombre;
     }
 
-    public double getTamaño() {
-        return tamaño;
+    /**
+     * @return the radio
+     */
+    public double getRadio() {
+        return radio;
     }
 
+    /**
+     * @return the gravedad
+     */
+    public double getGravedad() {
+        return gravedad;
+    }
+
+    /**
+     * @return the distanciaAlSol
+     */
     public double getDistanciaAlSol() {
         return distanciaAlSol;
     }
 
+    /**
+     * @return the numeroLunas
+     */
     public int getNumeroLunas() {
         return numeroLunas;
     }
-    
-    public abstract double calcularAnio();
+
+    /**
+     * @return the atmosfera
+     */
+    public String getAtmosfera() {
+        return atmosfera;
+    }
+
+    /**
+     * @return the anillos
+     */
+    public int getAnillos() {
+        return anillos;
+    }
 
     @Override
     public String toString() {
-        return nombre + " | Tamaño: " + tamaño + " km | Distancia al Sol: " + distanciaAlSol + " millones km | Lunas: " + numeroLunas;
+        return "nombre=" + nombre + "\nradio=" + radio + "\ngravedad=" + gravedad + "\ndistanciaAlSol=" + distanciaAlSol + "\nnumeroLunas=" + numeroLunas + "\natmosfera=" + atmosfera + "\nanillos=" + anillos ;
     }
 }
